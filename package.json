@@ -1,0 +1,17 @@
+{
+  "name": "messmeter-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MessMeter — Smart Hostel Mess Food Quality Analytics Platform",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
