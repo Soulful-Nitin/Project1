@@ -18,12 +18,12 @@ import {
 } from '../types/index.js';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL:
+    import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
   },
 });
-
 // Attach JWT token to requests if present
 api.interceptors.request.use(
   (config) => {
